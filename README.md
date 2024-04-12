@@ -1,10 +1,6 @@
-<!-- <p align="center">
-  <img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
-
 <p align="center">
-   A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.
-</p> -->
+  <img src="https://raw.githubusercontent.com/safeerep/design-planner/feat/basics/assets/dp-removebg-preview.png" width="320" alt="Nest Logo" />
+</p>
 
 # Design Planner
 
