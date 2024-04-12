@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/safeerep/design-planner/feat/basics/assets/dp-removebg-preview.png" width="320" alt="Nest Logo" />
+</p>
+
 # Design Planner
 
 Design Planner is a web application built to assist designers in planning and organizing their projects effectively. It provides a platform for creating and managing design projects, collaborating with team members, and keeping track of project progress.
@@ -60,7 +64,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/safeerep/design-planner/blob/main/LICENSE.md) file for details.
 
 ## Acknowledgements
 
