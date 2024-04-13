@@ -1,21 +1,23 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/safeerep/design-planner/feat/basics/assets/dp-removebg-preview.png" width="320" alt="Nest Logo" />
+  <img src="https://raw.githubusercontent.com/safeerep/design-planner/feat/basics/assets/dp-removebg-preview.png" width="320" alt="DesignPlannerLogo" />
 </p>
 
 # Design Planner
 
-Design Planner is a web application built to assist designers in planning and organizing their projects effectively. It provides a platform for creating and managing design projects, collaborating with team members, and keeping track of project progress.
+Design Planner is a web application built to assist developers plan the database modeling. It provides a platform for creating and managing database models and collaborating with team members. If it is SQL or NO SQL database you can design and plan.
 
 ## Features
 
 - **User Authentication**: Secure user authentication system using JWT tokens.
-- **Project Creation**: Users can create new design projects and set project details such as name, description, and deadlines.
-- **Task Management**: Organize project tasks into lists, assign tasks to team members, and set due dates.
-- **Collaboration**: Invite team members to collaborate on projects, assign tasks, and communicate through comments.
-- **File Uploads**: Upload and attach files to projects and tasks for reference and collaboration.
-- **Dashboard**: Overview of all active projects, tasks, deadlines, and notifications.
-- **Search and Filter**: Easily find projects, tasks, and team members using search and filter options.
+- **Project Creation**: Users can create new projects and set project details such as name, and description
+- **Database Model Creation**: Organize Models and connect with lines for relations.
+- **Dashboard**: Overview of all projects and database models.
+- **Search and Filter**: Easily find projects.
 - **Responsive Design**: Compatible with various devices and screen sizes.
+
+## Future Feature
+
+- **Collaboration**: Invite team members to collaborate on projects, and build database models together.
 
 ## Tech Stack
 
@@ -23,8 +25,7 @@ Design Planner is a web application built to assist designers in planning and or
 - **Backend**: Developed using Node.js and Express.js for handling server-side logic and API endpoints.
 - **Database**: MongoDB used as the database for storing project, task, user, and authentication data.
 - **Authentication**: JWT tokens for secure user authentication and authorization.
-- **File Storage**: Integration with a cloud storage service (e.g., AWS S3) for storing uploaded files.
-- **Deployment**: Deployed on a cloud platform (e.g., Heroku) for accessibility from anywhere.
+- **Deployment**: Not yet decided.
 
 ## Getting Started
 
