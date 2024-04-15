@@ -3,6 +3,7 @@ config();
 import express, { Application } from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import router from "./routers";
 
 const app: Application = express();
 
@@ -21,6 +22,9 @@ app.get('/health', (req, res) => {
         message: "checkup success, app is running fine"
     })
 })
+
+// router to controll all routes;
+app.use('/api', router)
 
 const PORT: number = Number(process.env.PORT)
 app.listen(PORT, () => {
