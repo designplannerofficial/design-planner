@@ -1,0 +1,2 @@
+import passport from "passport";
+export const signInWithGoogleRedirect = passport.authenticate('google', { successRedirect: "/api/oauth2/google/success", failureRedirect: "/api/oauth2/google/failed" });

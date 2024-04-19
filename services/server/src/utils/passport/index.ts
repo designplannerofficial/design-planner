@@ -1,0 +1,1 @@
+export { default as GoogleOAuthStrategy } from "./google.strategy";

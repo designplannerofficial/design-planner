@@ -1,8 +1,15 @@
-import { Router } from "express";
-import { loginController, registerController } from "../controllers";
-const router = Router()
+import express from "express";
+import {
+    signInWithGoogle,
+    signInWithGoogleFailed,
+    signInWithGoogleRedirect,
+    signInWithGoogleSuccess
+} from "../controllers";
+const router = express.Router();
 
-router.post('/login', loginController)
-router.post('/register', registerController)
+router.route('/oauth2/google').get(signInWithGoogle);
+router.route('/oauth2/google/redirect').get(signInWithGoogleRedirect);
+router.route('/oauth2/google/failed').get(signInWithGoogleFailed);
+router.route('/oauth2/google/success').get(signInWithGoogleSuccess);
 
 export default router;
