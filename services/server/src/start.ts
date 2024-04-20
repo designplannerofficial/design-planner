@@ -1,9 +1,10 @@
-import { config } from "dotenv";
-config();
+require('dotenv').config();
 import express, { Application } from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import router from "./routers";
+import { NotFoundError } from "./utils/errors";
+import { ErrorHandler } from "./middlewares/error.handler";
 
 const app: Application = express();
 
@@ -11,7 +12,7 @@ const app: Application = express();
 app.use(express.json())
 app.use(cors({
     origin: process.env.CLIENT_URL,
-    methods: ["GET","POST", "PUT", "PATCH", "DELETE"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true
 }))
 app.use(cookieParser())
@@ -25,6 +26,9 @@ app.get('/health', (req, res) => {
 
 // router to controll all routes;
 app.use('/api', router)
+
+app.use('*', () => { throw new NotFoundError() });
+app.use(ErrorHandler);
 
 const PORT: number = Number(process.env.PORT)
 app.listen(PORT, () => {
