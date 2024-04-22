@@ -1,13 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "./components/mode-toggle";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./page/Landing";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="flex flex-col gap-5 h-screen items-center justify-center">
-      <h1>DesignPlanner</h1>
-      <Button>Click me</Button>
-      <ModeToggle />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
