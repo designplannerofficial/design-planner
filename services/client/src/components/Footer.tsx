@@ -3,9 +3,9 @@ import Logo from "./Logo";
 const Footer = () => {
   return (
     <>
-      <div className="border-t p-20 flex justify-between">
+      <div className="border-t p-5 md:p-20 flex flex-col md:flex-row gap-5 justify-between">
         <Logo />
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
           <div className="space-y-3">
             <h5 className="uppercase font-semibold">Company</h5>
             <p className="hover-opacity">How it works</p>
