@@ -78,3 +78,7 @@
 .hover-opacity {
   @apply hover:opacity-80 cursor-pointer;
 }
+
+.active {
+  @apply font-bold underline;
+}

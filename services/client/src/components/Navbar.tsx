@@ -1,20 +1,30 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-5 px-20 border-b">
+    <div className="flex items-center justify-between py-5 px-5 md:px-20 border-b">
       <Logo />
-      <div className="flex gap-10 items-center">
-        <Link to="/about">About</Link>
-        <Link to="/features">Features</Link>
-        <Link to="/blog">Event</Link>
-        <Link to="/pricing">Pricing</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/sign-up" className="">
+      <div className="gap-10 items-center hidden md:flex">
+        <NavLink className="hover-opacity" to="/about">
+          About
+        </NavLink>
+        <NavLink className="hover-opacity" to="/features">
+          Features
+        </NavLink>
+        <NavLink className="hover-opacity" to="/blog">
+          Event
+        </NavLink>
+        <NavLink className="hover-opacity" to="/pricing">
+          Pricing
+        </NavLink>
+        <NavLink className="hover-opacity" to="/login">
+          Login
+        </NavLink>
+        <NavLink className="hover-opacity" to="/sign-up">
           Sign Up
-        </Link>
+        </NavLink>
         <ModeToggle />
       </div>
     </div>
