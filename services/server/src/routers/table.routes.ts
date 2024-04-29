@@ -4,8 +4,8 @@ import {
     createTableController,
     updateTableController,
     addFieldController,
-    addReferenceController,
-    updateFieldController
+    updateFieldController,
+    makeReferenceController
 } from "../controllers";
 const router = express.Router();
 
@@ -16,10 +16,11 @@ router.route('/:id')
     .put(RequireAuth, updateTableController);
 
 router.route('/field')
-    .put(updateFieldController)
-    .post(addFieldController);
+    .put(RequireAuth, updateFieldController)
+    .post(RequireAuth, addFieldController);
 
 router.route('/reference')
-    .post(addReferenceController);
+    .put(RequireAuth, makeReferenceController)
+    .post(RequireAuth, makeReferenceController);
 
 export default router;

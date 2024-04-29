@@ -17,7 +17,7 @@ export const createDatabaseController = async (req: Request, res: Response, next
         await Project.updateOne({
             _id: value.projectRef
         }, {
-            $push: { databases: value.projectRef }
+            $push: { databases: database._id }
         });
         res.status(201).json(database);
     } catch (error) {

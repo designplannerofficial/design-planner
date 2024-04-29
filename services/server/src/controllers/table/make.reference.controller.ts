@@ -3,7 +3,7 @@ import Table from "../../models/table.model";
 import { validationError } from "../../utils/errors";
 import { addReferenceSchema } from "../../utils/validation";
 
-export const addReferenceController = async (req: Request, res: Response, next: NextFunction) => {
+export const makeReferenceController = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { values, error} = await addReferenceSchema.validateAsync(req.body);
         if(error) {
