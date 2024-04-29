@@ -8,10 +8,11 @@ export const updateProjectController = async (req: Request, res: Response, next:
     try {
         const { value, error } = await updateProjectSchema.validateAsync(req.body);
         const user = req.user as UserPayload;
+        const id = req.params.id as string;
         if (error) {
             throw new validationError(error);
         }
-        const project = await Project.findById(value._id);
+        const project = await Project.findById(id);
         if (!project) {
             throw new Error("Project doesn't exist");
         }

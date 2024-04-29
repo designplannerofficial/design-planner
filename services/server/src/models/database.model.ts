@@ -19,7 +19,7 @@ const databaseSchema: Schema = new mongoose.Schema({
     },
     tables: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'databases'
+        ref: 'tables'
     }]
 });
 
