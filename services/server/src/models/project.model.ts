@@ -1,7 +1,9 @@
+import { required } from "joi";
 import mongoose, { Document, Schema } from "mongoose";
 
 export interface IProject extends Document {
     _id?: mongoose.Types.ObjectId;
+    userRef: mongoose.Types.ObjectId;
     name: string;
     databases: Record<string, string>[];
     createdAt?: Date;
@@ -9,6 +11,11 @@ export interface IProject extends Document {
 }
 
 const projectSchema: Schema = new mongoose.Schema({
+    userRef: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users',
+        required: true
+    },
     name: {
         type: String,
         required: true
