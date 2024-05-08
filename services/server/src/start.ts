@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser"
 import router from "./routers";
 import { NotFoundError } from "./utils/errors";
 import { ErrorHandler } from "./middlewares/error.handler";
+import { swaggerSpecs } from "./utils/swagger";
+import swagger from "swagger-ui-express";
 
 const app: Application = express();
 
@@ -23,9 +25,10 @@ app.get('/health', (req, res) => {
         message: "checkup success, app is running fine"
     })
 })
-
+// check documentation on {{domain}}/api-docs
+app.use('/api-docs', swagger.serve, swagger.setup(swaggerSpecs));
 // router to controll all routes;
-app.use('/api', router)
+app.use('/api/v1', router)
 
 app.use('*', () => { throw new NotFoundError() });
 app.use(ErrorHandler);
