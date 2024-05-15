@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/safeerep/design-planner/feat/basics/assets/dp-removebg-preview.png" width="320" alt="DesignPlannerLogo" />
+  <img src="https://raw.githubusercontent.com/designplannerofficial/design-planner/docs/assets/dp-removebg-preview.png" width="320" alt="DesignPlannerLogo" />
 </p>
 
 # Design Planner
